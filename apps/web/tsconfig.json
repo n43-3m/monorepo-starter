@@ -1,0 +1,29 @@
+{
+	"extends": "@repo/typescript-config/react.json",
+	"compilerOptions": {
+		"useDefineForClassFields": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"erasableSyntaxOnly": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedSideEffectImports": true,
+		"verbatimModuleSyntax": true,
+
+		"declaration": true,
+		"declarationMap": true,
+		"esModuleInterop": true,
+		"incremental": false,
+		"isolatedModules": true,
+		"noUncheckedIndexedAccess": true,
+		"resolveJsonModule": true,
+		"outDir": "./dist",
+		"baseUrl": "./",
+		"paths": {
+			"@/*": ["./src/*"]
+		},
+		"jsx": "react-jsx",
+		"types": ["vite/client"]
+	},
+
+	"include": ["vite.config.ts"]
+}
