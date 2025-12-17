@@ -1,3 +1,4 @@
+import { EnvParser } from '@repo/EnvParser'
 import z from 'zod'
 
 const ENVSchema = z.object({
@@ -10,13 +11,6 @@ const ENVSchema = z.object({
 	DATABASE_URL: z.string().min(1, 'database url is required'),
 })
 
-const result = ENVSchema.safeParse(process.env)
-
-if (!result.success) {
-	throw new Error(result.error.message)
-}
-
-const env = result.data
+const env = EnvParser(ENVSchema)
 
 export default env
-export type ENV = z.infer<typeof ENVSchema>
