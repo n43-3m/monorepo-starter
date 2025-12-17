@@ -1,4 +1,4 @@
-import { EnvParser } from '@repo/EnvParser'
+import { EnvParser } from '@repo/envparser'
 import z from 'zod'
 
 const ENVSchema = z.object({
