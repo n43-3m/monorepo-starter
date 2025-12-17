@@ -5,13 +5,12 @@
 		"build": "turbo run build",
 		"dev": "turbo run dev",
 		"lint": "turbo run lint",
-		"lint:format": "turbo run lint:format",
-		"format": "biome format --write ",
+		"format": "turbo run format ",
 		"check-types": "turbo run check-types",
 		"prepare": "husky"
 	},
 	"lint-staged": {
-		"**/*.{ts,tsx,js,jsx}": " pnpm lint:fix",
+		"**/*.{ts,tsx,js,jsx}": "pnpm lint",
 		"**/*.{json,css,html}": "pnpm format"
 	},
 	"devDependencies": {
