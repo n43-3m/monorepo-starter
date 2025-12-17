@@ -46,12 +46,12 @@ importers:
         specifier: ^4.1.12
         version: 4.2.1
     devDependencies:
-      '@repo/EnvParser':
-        specifier: workspace:*
-        version: link:../../../packages/envParser
       '@repo/biome-config':
         specifier: workspace:*
         version: link:../../../tooling/biome-config
+      '@repo/envparser':
+        specifier: workspace:*
+        version: link:../../../packages/envParser
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../../tooling/typescript-config
